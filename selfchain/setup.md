@@ -34,7 +34,6 @@ go version
 ```
 ### Node Installation
 ```
-# Install selfchain through repository
 cd $HOME
 rm -rf selfchain
 git clone https://github.com/chain4energy/c4e-chain.git selfchain
