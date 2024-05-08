@@ -34,12 +34,13 @@ go version
 ```
 ### Node Installation
 ```
+# Install selfchain through repository
 cd $HOME
-mkdir -p $HOME/go/bin/
-curl -O http://37.60.236.233/selfchain/selfchaind
-chmod +x selfchaind
-mv selfchaind $HOME/go/bin/
-selfchaind version
+rm -rf selfchain
+git clone https://github.com/chain4energy/c4e-chain.git selfchain
+cd selfchain
+git checkout 0.2.2
+make install
 ```
 >#### replace the `moniker` with the name you want
 ```
