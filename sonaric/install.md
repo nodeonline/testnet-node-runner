@@ -1,0 +1,11 @@
+# SONARIC AI NODE
+
+
+
+
+
+
+
+
+# specifications
+
