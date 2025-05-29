@@ -4,7 +4,6 @@
 ```
  achillesd keys add wallet
 ```
-> Change wallet to your wallet name
 
 
 
