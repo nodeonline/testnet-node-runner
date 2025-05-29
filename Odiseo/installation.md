@@ -3,6 +3,12 @@
 <p align= "center">
 <img src="https://github.com/nodeonline/testnet-node-runner/blob/main/Odiseo/logo-odiseo.jpg" "width="250" height="150" /><b\>
 
+##### api      : https://api.odiseo.nodeonline.xyz
+##### rpc      : https://rpc.odiseo.nodeonline.xyz
+##### explorer : https://explorer.nodeonline.xyz/odiseo-testnet
+
+
+
 
 ### Hardware requirements
 > Recommended Hardware: 4 Cores, 8GB RAM, 200GB of storage (NVME)
