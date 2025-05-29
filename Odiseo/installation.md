@@ -158,5 +158,6 @@ sudo systemctl restart achillesd.service && sudo journalctl -u achillesd.service
 achillesd status 2>&1 | jq .sync_info
 ```
 
-continue validator setup
+[continue validator setup](https://github.com/nodeonline/testnet-node-runner/blob/main/Odiseo/cli%20cheatsheet.md)
+
 
