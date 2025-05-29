@@ -1,4 +1,7 @@
-## ODISEO CHAIN SETUP VALIDATOR
+## **ODISEO CHAIN SETUP VALIDATOR**
+
+<p align= "center">
+<img src="(https://xplorer.vinjan.xyz/logos/odiseo.png) "width="350" height="250" />
 
 
 ### Hardware requirements
