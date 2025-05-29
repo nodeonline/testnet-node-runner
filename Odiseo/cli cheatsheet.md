@@ -102,3 +102,61 @@ achillesd query slashing signing-info $(achillesd tendermint show-validator)
 ```
 [[ $(achillesd q staking validator $VALOPER_ADDRESS_odiseo -oj | jq -r .consensus_pubkey.key) = $(achillesd status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "Your key status is ok" || echo -e "Your key status is error"
 ```
+
+
+# Service operations
+
+Check logs
+```
+sudo journalctl -u achillesd -f
+```
+Sync info
+```
+achillesd status 2>&1 | jq .SyncInfo
+```
+Node info
+```
+achillesd status 2>&1 | jq .NodeInfo
+```
+
+
+Start service
+```
+sudo systemctl start achillesd
+```
+Stop service
+```
+sudo systemctl stop achillesd
+```
+Restart service
+```
+sudo systemctl restart achillesd
+```
+Check service status
+```
+sudo systemctl status achillesd
+```
+Reload services
+```
+sudo systemctl daemon-reload
+```
+Enable Service
+```
+sudo systemctl enable achillesd
+```
+Disable Service
+```
+sudo systemctl disable achillesd
+```
+
+
+# Delete Node
+Before deleting, it is best to backup the validator key first.
+```
+sudo systemctl stop achillesd
+sudo systemctl disable achillesd
+sudo rm /etc/systemd/system/achillesd.service
+sudo systemctl daemon-reload
+rm -f $(which achillesd)
+rm -rf .achilles
+```
