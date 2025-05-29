@@ -1,4 +1,4 @@
-# **ODISEO CHAIN SETUP VALIDATOR TESTNET**
+## **ODISEO CHAIN SETUP VALIDATOR TESTNET**
 
 <p align= "center">
 <img src="https://github.com/nodeonline/testnet-node-runner/blob/main/Odiseo/logo-odiseo.jpg" "width="250" height="150" /><b\>
