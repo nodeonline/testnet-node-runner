@@ -1,7 +1,7 @@
 ## **LUMERA CHAIN SETUP VALIDATOR TESTNET**
 
 <p align= "center">
-<img src="" "width="250" height="150" /><b\>
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/main/lumera/logo-lumera.png" "width="250" height="150" /><b\>
 
 ##### api      : https://api.lumera.nodeonline.xyz
 ##### rpc      : https://rpc.lumera.nodeonline.xyz
@@ -26,7 +26,6 @@ echo "export MONIKER="moniker"" >> $HOME/.bash_profile
 echo "export LUMERA_CHAIN_ID="lumera-testnet-1"" >> $HOME/.bash_profile
 echo "export LUMERA_PORT="20"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
-
 ```
 
 ### # _Install GO,If you need_ 
