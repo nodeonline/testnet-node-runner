@@ -73,7 +73,8 @@ achillesd tx staking edit-validator \
 --details "" \
 --chain-id ithaca-1 \
 --commission-rate 0.1 \
---gas auto --gas-adjustment 1.5 --fees 65000uodis \
+--gas auto --gas-adjustment 1.5 \
+--gas-prices 0.25uodis \
 --from $WALLET \
 -y
 ```
