@@ -63,9 +63,9 @@ achillesd version #check_versionn
 ### # _Initialize The Node_ 
 ```
 achillesd init $MONIKER --chain-id ithaca-1
-achillesd config node tcp://localhost:${ODISEO_PORT}657
-achillesd config keyring-backend os
-achillesd config chain-id ithaca-1
+sed -i -e "s|^node *=.*|node = \"tcp://localhost:${ODISEO_PORT}657\"|" $HOME/.achilles/config/client.toml
+sed -i -e "s|^keyring-backend *=.*|keyring-backend = \"os\"|" $HOME/.achilles/config/client.toml
+sed -i -e "s|^chain-id *=.*|chain-id = \"ithaca-1\"|" $HOME/.achilles/config/client.toml
 ```
 
 ### # _download genesis and addrbook_
