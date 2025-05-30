@@ -162,10 +162,6 @@ sudo systemctl start lumera-testnet.service && sudo journalctl -u lumera-testnet
 lumerad status 2>&1 | jq .sync_info
 ```
 
-
-
-https://github.com/nodeonline/testnet-node-runner/blob/main/lumera/cli%20cheatsheet.md
-
 next step validator setup
 https://github.com/nodeonline/testnet-node-runner/blob/main/lumera/cli%20cheatsheet.md
 
