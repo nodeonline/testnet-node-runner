@@ -21,10 +21,10 @@ sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux 
 ### # _set vars_
 > change manual your "wallet","moniker","LUMERA_PORT" 
 ```
-echo "export WALLET="wallet"" >> $HOME/.bash_profile
-echo "export MONIKER="moniker"" >> $HOME/.bash_profile
-echo "export LUMERA_CHAIN_ID="lumera-testnet-1"" >> $HOME/.bash_profile
-echo "export LUMERA_PORT="20"" >> $HOME/.bash_profile
+echo "export WALLET="wallet" >> $HOME/.bash_profile
+echo "export MONIKER="moniker" >> $HOME/.bash_profile
+echo "export LUMERA_CHAIN_ID="lumera-testnet-1" >> $HOME/.bash_profile
+echo "export LUMERA_PORT="20" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
