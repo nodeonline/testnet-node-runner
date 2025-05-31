@@ -19,11 +19,10 @@ sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux 
 ```
 
 ### # _set vars_
-> change manual your "wallet","moniker","LUMERA_PORT" 
+> change manual your "wallet","moniker"
 ```
 echo "export WALLET="wallet"" >> $HOME/.bash_profile
 echo "export MONIKER="moniker"">> $HOME/.bash_profile
-echo "export LUMERA_PORT="port"">> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -91,7 +90,7 @@ sudo systemctl enable lumera-testnet.service
 ### # _Initialize the node & Set node config_
 ```
 lumerad init $MONIKER --chain-id lumera-testnet-1
-sed -i -e "s|^node *=.*|node = \"tcp://localhost:${LUMERA_PORT}957\"|" $HOME/.lumera/config/client.toml
+sed -i -e "s|^node *=.*|node = \"tcp://localhost:16957\"|" $HOME/.lumera/config/client.toml
 sed -i -e "s|^keyring-backend *=.*|keyring-backend = \"os\"|" $HOME/.lumera/config/client.toml
 sed -i -e "s|^chain-id *=.*|chain-id = \"lumera-testnet-1\"|" $HOME/.lumera/config/client.toml
 ```
@@ -109,25 +108,10 @@ PEERS="$(curl -sS https://rpc.lumera.nodeonline.xyz/net_info | jq -r '.result.pe
 sed -i -e "s|^seeds *=.*|seeds = '"$SEEDS"'|; s|^persistent_peers *=.*|persistent_peers = '"$PEERS"'|" $HOME/.lumera/config/config.toml
 ```
 
-### # _set custom ports in app.toml_
+### # _set custom ports_
 ```
-sed -i.bak -e "s%:1317%:${LUMERA_PORT}317%g;
-s%:8080%:${LUMERA_PORT}080%g;
-s%:9090%:${LUMERA_PORT}090%g;
-s%:9091%:${LUMERA_PORT}091%g;
-s%:8545%:${LUMERA_PORT}545%g;
-s%:8546%:${LUMERA_PORT}546%g;
-s%:6065%:${LUMERA_PORT}065%g" $HOME/.lumera/config/app.toml
-```
-
-### # _set custom ports in config.toml file_
-```
-sed -i.bak -e "s%:26658%:${LUMERA_PORT}658%g;
-s%:26657%:${LUMERA_PORT}657%g;
-s%:6060%:${LUMERA_PORT}060%g;
-s%:26656%:${LUMERA_PORT}656%g;
-s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${LUMERA_PORT}656\"%;
-s%:26660%:${LUMERA_PORT}660%g" $HOME/.lumera/config/config.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:16958\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:16957\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:16960\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:16956\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":16966\"%" $HOME/.lumera/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:16917\"%; s%^address = \":8080\"%address = \":16980\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:16990\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:16991\"%; s%:8545%:16945%; s%:8546%:16946%; s%:6065%:16965%" $HOME/.lumera/config/app.toml
 ```
 
 ### # _Set minimum gas price_
