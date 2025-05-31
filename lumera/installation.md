@@ -23,8 +23,7 @@ sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux 
 ```
 echo "export WALLET="wallet" >> $HOME/.bash_profile
 echo "export MONIKER="moniker" >> $HOME/.bash_profile
-echo "export LUMERA_CHAIN_ID="lumera-testnet-1" >> $HOME/.bash_profile
-echo "export LUMERA_PORT="20" >> $HOME/.bash_profile
+echo "export LUMERA_PORT="port" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
