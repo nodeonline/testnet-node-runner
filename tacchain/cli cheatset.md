@@ -115,7 +115,7 @@ tacchaind  query slashing signing-info $(tacchaind  tendermint show-validator)
 
 ### # Check logs
 ```
-sudo journalctl -u tacchaind  -f
+sudo journalctl -u tacchaind -f -o cat
 ```
 ### # Sync info
 ```
