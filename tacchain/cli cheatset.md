@@ -97,7 +97,7 @@ tacchaind  q staking validator $(tacchaind  keys show $WALLET --bech val -a)
 
 ### # Unjail Validator
 ```
-tacchaind  tx slashing unjail --from $WALLET --chain-id tacchain_2391-1 --gas-prices=0.25uodis --gas-adjustment=1.5 --gas=auto
+tacchaind  tx slashing unjail --from $WALLET --chain-id tacchain_2391-1 --gas-prices=0.25utac --gas-adjustment=1.5 --gas=auto
 ```
 
 ### # Check Jailed Reason
