@@ -1,7 +1,7 @@
 ## **TAC CHAIN SETUP VALIDATOR TESTNET**
 
 <p align= "center">
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/main/Tacchain node/logo-Tacchain node.jpg" "width="250" height="150" /><b\>
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/main/tacchain/logo%20tac.jpg" "width="250" height="150" /><b\>
 
 ##### api      : https://api.tac.nodeonline.xyz
 ##### rpc      : https://rpc.tac.nodeonline.xyz
