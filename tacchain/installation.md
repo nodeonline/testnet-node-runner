@@ -156,6 +156,7 @@ sudo systemctl restart tacchaind.service && sudo journalctl -u tacchaind.service
 tacchaind status 2>&1 | jq .sync_info
 ```
 
+[next setup validator](https://github.com/nodeonline/testnet-node-runner/blob/main/tacchain/cli%20cheatset.md)
 
 
 
