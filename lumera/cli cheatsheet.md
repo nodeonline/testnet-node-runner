@@ -96,7 +96,7 @@ lumerad q staking validator $(lumerad keys show $WALLET --bech val -a)
 
 ### # Unjail Validator
 ```
-lumerad tx slashing unjail --from $WALLET --chain-id ithaca-1 --gas-prices=0.25uodis --gas-adjustment=1.5 --gas=auto
+lumerad tx slashing unjail --from $WALLET --chain-id ithaca-1 --gas-prices=0.25ulume --gas-adjustment=1.5 --gas=auto
 ```
 
 ### # Check Jailed Reason
