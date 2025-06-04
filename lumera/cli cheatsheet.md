@@ -118,11 +118,11 @@ sudo journalctl -u lumerad -f
 ```
 ### # Sync info
 ```
-lumerad status 2>&1 | jq .SyncInfo
+lumerad status 2>&1 | jq .sync.info
 ```
 ### # Node info
 ```
-lumerad status 2>&1 | jq .NodeInfo
+lumerad status 2>&1 | jq .node_info
 ```
 ### # start service
 ```
