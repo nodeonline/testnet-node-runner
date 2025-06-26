@@ -133,21 +133,13 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
-
-sudo systemctl daemon-reload
-sudo systemctl enable xosd.service
 ```
-
-
-### # _Download Latest Snapshot_
-```
-curl "https://ss.t.nodeonline.xyz/testnet/xos/ss.t.xos-latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.xosd"
-```
-
 
 
 ### # _Start service and check the logs_ 
 ```
+sudo systemctl daemon-reload
+sudo systemctl enable xosd.service
 sudo systemctl restart xosd.service && sudo journalctl -u xosd.service -f --no-hostname -o cat
 ```
 
