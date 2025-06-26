@@ -72,11 +72,11 @@ curl -L https://ss.t.nodeonline.xyz/testnet/xos/genesis.json > $HOME/.xosd/confi
 curl -L https://ss.t.nodeonline.xyz/testnet/xos/addrbook.json > $HOME/.xosd/config/addrbook.json
 ```
 
-### # _Configure Seeds and Peers_  jgn dulu di pake
+### # _Configure Seeds and Peers_
 ```
-seeds="29b3dbb76409b6e23d26d1ab84181454323b4c2c@194.238.28.132:11656"
-PEERS="$(curl -sS https://rpc.xos.nodeonline.xyz/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}' | sed -z 's|\n|,|g;s|.$||')"
-sed -i -e "s|^seeds *=.*|seeds = '"$SEEDS"'|; s|^persistent_peers *=.*|persistent_peers = '"$PEERS"'|" $HOME/.xosd/config/config.toml
+PEERS=`curl -sL https://raw.githubusercontent.com/xos-labs/networks/main/testnet/peers.txt | sort -R | head -n 10 | awk '{print $1}' | paste -s -d, -`
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$PEERS\"/" ~/.xosd/config/config.toml
+cat ~/.xosd/config/config.toml | grep seeds
 ```
 
 ### #_set custom ports in app.toml_
