@@ -66,7 +66,7 @@ sed -i -e "s|^keyring-backend *=.*|keyring-backend = \"os\"|" $HOME/.xosd/config
 sed -i -e "s|^chain-id *=.*|chain-id = \"xos_1267-1\"|" $HOME/.xosd/config/client.toml
 ```
 
-### # _download genesis and addrbook_
+### # _download genesis and addrbook_ JGN DI PAKAI DULU
 ```
 curl -L https://ss.t.nodeonline.xyz/testnet/xos/genesis.json > $HOME/.xosd/config/genesis.json
 curl -L https://ss.t.nodeonline.xyz/testnet/xos/addrbook.json > $HOME/.xosd/config/addrbook.json
@@ -148,4 +148,4 @@ sudo systemctl restart xosd.service && sudo journalctl -u xosd.service -f --no-h
 xosd status 2>&1 | jq .sync_info
 ```
 
-[continue validator setup](https://github.com/nodeonline/testnet-node-runner/blob/main/xos/cli%20cheatsheet.md)
+[continue validator setup](https://github.com/nodeonline/testnet-node-runner/blob/main/XOS/cli_cheatseet.md)
