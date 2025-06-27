@@ -10,7 +10,7 @@
 ### # Recover Existing Keys Use
 > Change 'wallet' to your wallet name
 ```
-### # xosd keys add wallet --recover
+xosd keys add wallet --recover
 ```
 > Change wallet to your wallet name
 
