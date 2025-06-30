@@ -54,7 +54,7 @@ cd $HOME
 rm -rf sphx-dev
 wget https://github.com/sphx-dev/infra-chain/releases/download/v0.0.10/sphx
 chmod +x sphx
-mv sphx ~/go/bin
+sudo mv sphx /usr/local/bin/sphxd
 sphxd version #check_versionn
 ```
 
