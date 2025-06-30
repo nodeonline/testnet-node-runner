@@ -53,9 +53,8 @@ go version
 cd $HOME
 rm -rf sphx-dev
 https://github.com/sphx-dev/infra-chain/releases/download/v0.0.5/sphx
-cd Achilles/sphx-dev
-git checkout v1.0.5
-make install
+chmod +x sphx
+mv sphx ~/go/bin
 sphxd version #check_versionn
 ```
 
