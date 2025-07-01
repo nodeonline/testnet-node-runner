@@ -109,11 +109,11 @@ xosd query slashing signing-info $(xosd tendermint show-validator)
 
 Check logs
 ```
-sudo journalctl -u xosd -f
+sudo journalctl -u xosd.service -f --no-hostname -o cat
 ```
 Sync info
 ```
-xosd status 2>&1 | jq .SyncInfo
+xosd status 2>&1 | jq .Sync_Info
 ```
 Node info
 ```
