@@ -50,7 +50,7 @@ xosd status 2>&1 | jq .sync_info
 >fill in your 'moniker' 'identity' 'details' 'website'
 ```
 xosd tx staking create-validator \
---amount=1000000axos \
+--amount=1000000000axos \
 --pubkey=$(xosd tendermint show-validator) \
 --moniker="$MONIKER" \
 --identity="" \
@@ -61,7 +61,7 @@ xosd tx staking create-validator \
 --commission-max-rate=0.2 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation=1 \
---gas-prices 0.025axos \
+--gas-prices 100000axos \
 --gas=auto \
 --gas-adjustment=1.5 \
 --from $WALLET \
@@ -71,13 +71,11 @@ xosd tx staking create-validator \
 ### # Edit Existing Validator
 ```
 xosd tx staking edit-validator \
---new-moniker "$MONIKER" \
---identity "" \
---details "" \
+--new-moniker "moniker" \
 --chain-id xos_1267-1 \
---commission-rate 0.1 \
---gas auto --gas-adjustment 1.5 \
---gas-prices 0.25axos \
+--gas auto \
+--gas-adjustment 1.5 \
+--gas-prices 100000axos \
 --from $WALLET \
 -y
 ```
