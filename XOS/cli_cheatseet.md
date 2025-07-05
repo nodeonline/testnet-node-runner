@@ -13,7 +13,10 @@
 xosd keys add wallet --recover
 ```
 > Change wallet to your wallet name
-
+### # Export PK to PK EVM
+```
+xosd keys unsafe-export-eth-key wallet
+```
 ### # List All Wallet
 ```
  xosd keys list
