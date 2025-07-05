@@ -106,6 +106,13 @@ xosd query slashing signing-info $(xosd tendermint show-validator)
 ```
 
 
+
+### # Delegate Token to your own validator
+```
+xosd tx staking delegate $(xosd keys show wallet --bech val -a) 300000000000000000axos --from wallet --chain-id xos_1267-1 --fees 14000000000000000axos
+```
+
+
 # Service operations
 
 Check logs
