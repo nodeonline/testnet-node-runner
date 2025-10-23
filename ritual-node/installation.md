@@ -179,8 +179,12 @@ check Docker
 ```
 docker ps -a
 ```
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/d0f86ad450369c312b914346d0ec16a857fb8e79/ritual-node/cek_docker.png" />
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/b64be1cbe7795ede76a6b58f11cbe2b358d3864b/ritual-node/cek_docker.png" />
+> my docker
 
-
+check your logs infernet node
+```
+docker logs infernet-node
+```
 
 
