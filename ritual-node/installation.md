@@ -243,4 +243,4 @@ docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml down &
 If there is anything missing or wrong please let me know:  
 round_pushpin user id discord 917275641441816607 / @babangaip
 
-gRitual fam happy to you :indonesia:	
+gRitual fam happy to you.	
