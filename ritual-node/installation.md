@@ -115,6 +115,7 @@ nano ~/infernet-container-starter/projects/hello-world/contracts/Makefile
 replace it with version 1.4.0
 
 <img src="https://github.com/nodeonline/testnet-node-runner/blob/d0f86ad450369c312b914346d0ec16a857fb8e79/ritual-node/edit_node_version.png" />
+
 ```
 nano ~/infernet-container-starter/deploy/docker-compose.yaml
 ```
@@ -179,12 +180,28 @@ check Docker
 ```
 docker ps -a
 ```
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/b64be1cbe7795ede76a6b58f11cbe2b358d3864b/ritual-node/cek_docker.png" />
 > my docker
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/b64be1cbe7795ede76a6b58f11cbe2b358d3864b/ritual-node/cek_docker.png" />
 
 check your logs infernet node
 ```
 docker logs infernet-node
 ```
+> logs normal
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/a2fdf92b0f68c423a319576f05f879aa776b872e/ritual-node/photo/logs-infernit-node.png" />
+
+
+## :candle: **Deploy Consumer Contract**
+```
+cd ~/infernet-container-starter
+```
+```
+project=hello-world make deploy-contracts
+```
+
+<img src="" />
+
+
+
 
 
