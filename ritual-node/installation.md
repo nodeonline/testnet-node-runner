@@ -62,7 +62,6 @@ git clone https://github.com/ritual-net/infernet-container-starter && cd inferne
 
 ## :candle: **Running hello-world**
 
-
 ```
 screen -S ritual
 ```
@@ -114,21 +113,73 @@ nano ~/infernet-container-starter/projects/hello-world/contracts/Makefile
 ## :candle: **Edit Node Version**
 
 replace it with version 1.4.0
-<img src="" />
 
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/d0f86ad450369c312b914346d0ec16a857fb8e79/ritual-node/edit_node_version.png" />
+```
 nano ~/infernet-container-starter/deploy/docker-compose.yaml
+```
+> If it has been changed, press "CTRL + X" then "Y" to exit and save the file
 
 
+## :candle: **Initialize Configuration**
 
+Restart Docker containers
+```
+docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml down && docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml up -d
+```
 
+check Docker
+```
+docker ps -a
+```
 
+## :candle: **Install Foundry**
 
+before installing foundryup, we have to stop docker
+```
+docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml down
+```
+```
+cd
+```
+```
+mkdir foundry && cd foundry
+```
+```
+curl -L https://foundry.paradigm.xyz | bash
+```
+```
+source ~/.bashrc
+```
+```
+foundryup
+```
 
-
-
-
-
-
+## :candle: **Install the forge-std library & Install the infernet-sdk**
+```
+cd ~/infernet-container-starter/projects/hello-world/contracts
+```
+```
+rm -rf lib/forge-std lib/infernet-sdk
+```
+```
+forge install foundry-rs/forge-std
+```
+```
+forge install ritual-net/infernet-sdk
+```
+```
+cd ../../../
+```
+next, restart Docker containers
+```
+docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml down && docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml up -d
+```
+check Docker
+```
+docker ps -a
+```
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/d0f86ad450369c312b914346d0ec16a857fb8e79/ritual-node/cek_docker.png" />
 
 
 
