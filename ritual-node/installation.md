@@ -3,7 +3,7 @@
 
 
 ## **:candle: Hardware Requirements**
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/82eb2b2656743b841fe9eb61bd5092b33780b29a/ritual-node/SPEK.png" />
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/a55c6d42d7c231faca9e57ef75712df1a3b6f21b/ritual-node/photo/SPEK.png" />
 
 ## :candle: **Requirements**
 
@@ -83,7 +83,7 @@ edit configuration, you have to change :
 
 and also replace this part like this:
 
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/5c31f27e82e37d5040289f658ccb7a4e1092e663/ritual-node/edit_con.png" />
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/a55c6d42d7c231faca9e57ef75712df1a3b6f21b/ritual-node/photo/edit_con.png" />
 
 ```
 nano ~/infernet-container-starter/deploy/config.json
@@ -114,7 +114,7 @@ nano ~/infernet-container-starter/projects/hello-world/contracts/Makefile
 
 replace it with version 1.4.0
 
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/d0f86ad450369c312b914346d0ec16a857fb8e79/ritual-node/edit_node_version.png" />
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/a55c6d42d7c231faca9e57ef75712df1a3b6f21b/ritual-node/photo/edit_node_version.png" />
 
 ```
 nano ~/infernet-container-starter/deploy/docker-compose.yaml
@@ -181,7 +181,7 @@ check Docker
 docker ps -a
 ```
 > my docker
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/b64be1cbe7795ede76a6b58f11cbe2b358d3864b/ritual-node/cek_docker.png" />
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/a55c6d42d7c231faca9e57ef75712df1a3b6f21b/ritual-node/photo/cek_docker.png" />
 
 check your logs infernet node
 ```
