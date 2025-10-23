@@ -1,9 +1,11 @@
-# <p align= "center">  **:candle:Installation Ritual Node**
+# <p align= "center">  **:candle:Installation Ritual Node** 
+
+<p align= "center"> <img src="https://github.com/nodeonline/testnet-node-runner/blob/bbee61858bd76c05e3d076f55fa279fe0e25ff01/ritual-node/photo/logo_ritual.png" width="200" height="200" />
 
 
 
 ## **:candle: Hardware Requirements**
-<img src="https://github.com/nodeonline/testnet-node-runner/blob/a55c6d42d7c231faca9e57ef75712df1a3b6f21b/ritual-node/photo/SPEK.png" />
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/a55c6d42d7c231faca9e57ef75712df1a3b6f21b/ritual-node/photo/SPEK.png" /> 
 
 ## :candle: **Requirements**
 
