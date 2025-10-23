@@ -77,19 +77,58 @@ project=hello-world make deploy-container
 ## :candle: **Node Configuration**
 
 edit configuration, you have to change :
-- Private Key (only 0x)
-- RPC_URL: https://mainnet.base.org/ or BASE MAINNET FROM ALCHEMY
-- address registry: 0x3B1554f346DFe5c482Bb4BA31b880c1C18412170
+- replace Private Key (only 0x)
+- replace RPC_URL: https://mainnet.base.org/ or BASE MAINNET FROM ALCHEMY
+- replace address registry: 0x3B1554f346DFe5c482Bb4BA31b880c1C18412170
+- replace 0 to 3, "trail_head_blocks": 3,
 
-and also change this part like this:
+and also replace this part like this:
 
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/5c31f27e82e37d5040289f658ccb7a4e1092e663/ritual-node/edit_con.png" />
 
 ```
 nano ~/infernet-container-starter/deploy/config.json
 ```
+> If it has been changed, press "CTRL + X" then "Y" to exit and save the file
+
 ```
 nano ~/infernet-container-starter/projects/hello-world/container/config.json
 ```
+> If it has been changed, press "CTRL + X" then "Y" to exit and save the file
+
+replace the registry address with this : 0x3B1554f346DFe5c482Bb4BA31b880c1C18412170
+```
+nano ~/infernet-container-starter/projects/hello-world/contracts/script/Deploy.s.sol
+```
+
+## :candle: **Edit Makefile**
+
++ replace sender's address with your private key (only 0x)
++ Change RPC_URL to https://mainnet.base.org/
+```
+nano ~/infernet-container-starter/projects/hello-world/contracts/Makefile
+```
+> If it has been changed, press "CTRL + X" then "Y" to exit and save the file
+
+
+## :candle: **Edit Node Version**
+
+replace it with version 1.4.0
+<img src="" />
+
+nano ~/infernet-container-starter/deploy/docker-compose.yaml
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
