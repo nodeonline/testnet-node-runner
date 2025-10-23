@@ -198,10 +198,14 @@ cd ~/infernet-container-starter
 ```
 project=hello-world make deploy-contracts
 ```
+you have to save **contract address** result from deploy sayGM
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/7c66741b3735e247b1418dcfde8d352593be5bc4/ritual-node/photo/sayGM.png" />
+If the transaction is successful, then you have deployed Sayang. You can check the txhash yourself on [basescan](https://basescan.org/)
 
+
+## :candle: **Call Contract**
+see the contract address in the rectangle
 <img src="" />
-
-
 
 
 
