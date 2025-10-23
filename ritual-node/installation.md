@@ -200,12 +200,45 @@ project=hello-world make deploy-contracts
 ```
 you have to save **contract address** result from deploy sayGM
 <img src="https://github.com/nodeonline/testnet-node-runner/blob/7c66741b3735e247b1418dcfde8d352593be5bc4/ritual-node/photo/sayGM.png" />
-If the transaction is successful, then you have deployed Sayang. You can check the txhash yourself on [basescan](https://basescan.org/)
+If the transaction is successful ✅, then you have deployed sayGM. You can check the txhash yourself on :mag: [basescan](https://basescan.org/)
 
 
 ## :candle: **Call Contract**
-see the contract address in the rectangle
-<img src="" />
+
+see the contract address in the rectangle and save
+
+<img src="https://github.com/nodeonline/testnet-node-runner/blob/25be5ec492cce692bfeff6e9c75344997cf91474/ritual-node/photo/call_contract.png" />
+edit your CallContract.s.sol file by inserting the new contract address. The preconfigured address is SaysGM saysGm = SaysGM(0x13D69Cf7d6CE4218F646B759Dcf334D82c023d8e), change it to the address that was generated when calling SaysGM.
 
 
+```
+nano ~/infernet-container-starter/projects/hello-world/contracts/script/CallContract.s.sol
+```
+> If it has been changed, press "CTRL + X" then "Y" to exit and save the file
 
+Deploy call contract
+```
+project=hello-world make call-contract
+```
+If the transaction is successful ✅, then you have deployed. You can check the txhash yourself on :mag: [basescan](https://basescan.org/)
+
+# <p align= "center">  **:candle:Congratulations, your node is running:candle:**
+
+
+check docker
+```
+docker ps -a
+```
+check logs docker
+```
+docker logs infernet-node
+```
+restart docker 
+```
+docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml down && docker compose -f ~/infernet-container-starter/deploy/docker-compose.yaml up -d
+```
+
+If there is anything missing or wrong please let me know:  
+round_pushpin user id discord 917275641441816607 / @babangaip
+
+gRitual fam happy to you :indonesia:	
