@@ -106,7 +106,7 @@ s%:26660%:${FAIRBLOCK_PORT}660%g" $HOME/.fairyring/config/config.toml
 
 ### # _Set Minimum Gas Price, Enable Prometheus, and Disable the Indexer_ 
 ```
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.25uodis\"|" $HOME/.fairyring/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.25ufairy\"|" $HOME/.fairyring/config/app.toml
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.fairyring/config/config.toml
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.fairyring/config/config.toml
 ```
