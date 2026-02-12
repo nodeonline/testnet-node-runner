@@ -65,22 +65,22 @@ fairyringd version
 ### # _Initialize The Node_ 
 ```
 fairyringd init $MONIKER --chain-id fairyring-testnet-1
-sed -i -e "s|^node *=.*|node = \"tcp://localhost:${FAIRBLOCK_PORT}657\"|" $HOME/.fairyringd/config/client.toml
-sed -i -e "s|^keyring-backend *=.*|keyring-backend = \"os\"|" $HOME/.fairyringd/config/client.toml
-sed -i -e "s|^chain-id *=.*|chain-id = \"fairyring-testnet-1\"|" $HOME/.fairyringd/config/client.toml
+sed -i -e "s|^node *=.*|node = \"tcp://localhost:${FAIRBLOCK_PORT}657\"|" $HOME/.fairyring/config/client.toml
+sed -i -e "s|^keyring-backend *=.*|keyring-backend = \"os\"|" $HOME/.fairyring/config/client.toml
+sed -i -e "s|^chain-id *=.*|chain-id = \"fairyring-testnet-1\"|" $HOME/.fairyring/config/client.toml
 ```
 
 ### # _download genesis and addrbook_
 ```
-curl -L https://ss.t.nodeonline.xyz/testnet/fairblock/genesis.json > $HOME/.fairyringd/config/genesis.json (SOON)
-curl -L https://ss.t.nodeonline.xyz/testnet/fairblock/addrbook.json > $HOME/.fairyringd/config/addrbook.json (SOON)
+curl -L https://ss.t.nodeonline.xyz/testnet/fairblock/genesis.json > $HOME/.fairyring/config/genesis.json (SOON)
+curl -L https://ss.t.nodeonline.xyz/testnet/fairblock/addrbook.json > $HOME/.fairyring/config/addrbook.json (SOON)
 ```
 
 ### # _Configure Seeds and Peers_ 
 ```
 seeds="29b3dbb76409b6e23d26d1ab84181454323b4c2c@194.238.28.132:11656"
 PEERS="$(curl -sS https://rpc.fairblock.nodeonline.xyz/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}' | sed -z 's|\n|,|g;s|.$||')"
-sed -i -e "s|^seeds *=.*|seeds = '"$SEEDS"'|; s|^persistent_peers *=.*|persistent_peers = '"$PEERS"'|" $HOME/.fairyringd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = '"$SEEDS"'|; s|^persistent_peers *=.*|persistent_peers = '"$PEERS"'|" $HOME/.fairyring/config/config.toml
 ```
 
 ### #_set custom ports in app.toml_
@@ -91,7 +91,7 @@ s%:9090%:${FAIRBLOCK_PORT}090%g;
 s%:9091%:${FAIRBLOCK_PORT}091%g;
 s%:8545%:${FAIRBLOCK_PORT}545%g;
 s%:8546%:${FAIRBLOCK_PORT}546%g;
-s%:6065%:${FAIRBLOCK_PORT}065%g" $HOME/.fairyringd/config/app.toml
+s%:6065%:${FAIRBLOCK_PORT}065%g" $HOME/.fairyring/config/app.toml
 ```
 
 ### # _set custom ports in config.toml file_
@@ -101,14 +101,14 @@ s%:26657%:${FAIRBLOCK_PORT}657%g;
 s%:6060%:${FAIRBLOCK_PORT}060%g;
 s%:26656%:${FAIRBLOCK_PORT}656%g;
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${FAIRBLOCK_PORT}656\"%;
-s%:26660%:${FAIRBLOCK_PORT}660%g" $HOME/.fairyringd/config/config.toml
+s%:26660%:${FAIRBLOCK_PORT}660%g" $HOME/.fairyring/config/config.toml
 ```
 
 ### # _Set Minimum Gas Price, Enable Prometheus, and Disable the Indexer_ 
 ```
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.25uodis\"|" $HOME/.fairyringd/config/app.toml
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.fairyringd/config/config.toml
-sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.fairyringd/config/config.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.25uodis\"|" $HOME/.fairyring/config/app.toml
+sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.fairyring/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.fairyring/config/config.toml
 ```
 
 ### # _Customize Pruning_ 
@@ -117,7 +117,7 @@ sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
-  $HOME/.fairyringd/config/app.toml
+  $HOME/.fairyring/config/app.toml
 ```
 
 ### # _create service file_ 
@@ -145,7 +145,7 @@ sudo systemctl enable fairyringd.service
 
 ### # _Download Latest Snapshot_
 ```
-curl "https://ss.t.nodeonline.xyz/testnet/fairblock/ss.t.fairblock-latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.fairyringd"
+curl "https://ss.t.nodeonline.xyz/testnet/fairblock/ss.t.fairblock-latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.fairyring"
 ```
 
 
